@@ -11,3 +11,6 @@ def index(request):
     }
     # used to send dynamic data
     return render(request,'index.html',context)
+def counter(request):
+    words_passed=request.POST["text"]
+    return render(request,"counter.html",{"words":words_passed})
